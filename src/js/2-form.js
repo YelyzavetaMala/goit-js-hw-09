@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
        
         const formData = {
-          email: document.querySelector('email').value,
-          message: document.querySelector('message').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value,
         };
         console.log(formData);
 
-        document.querySelector('email').value = '';
-        document.querySelector('message').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
         localStorage.removeItem('feedback-form-state');
       });
     });

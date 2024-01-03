@@ -1,4 +1,6 @@
 
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
   {
@@ -68,7 +70,6 @@ const images = [
 
 
 const galleryContainer = document.querySelector('.gallery');
-let lightboxInstance;
 
 function createGalleryItem(image) {
   const galleryItem = document.createElement('li');
@@ -104,12 +105,9 @@ function createGallery(images) {
 createGallery(images);
 
 
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
-document.addEventListener('DOMContentLoaded', function () {
+
   const gallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
   });
-});

@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target.matches('input, textarea')) {
  
           const currentState = {
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
+            email: document.getElementById('email').value.trim(),
+            message: document.getElementById('message').value.trim(),
           };
           localStorage.setItem('feedback-form-state', JSON.stringify(currentState));
         }
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
        
         const formData = {
-          email: document.getElementById('email').value,
-          message: document.getElementById('message').value,
+          email: document.getElementById('email').value.trim(),
+          message: document.getElementById('message').value.trim(),
         };
         console.log(formData);
 
